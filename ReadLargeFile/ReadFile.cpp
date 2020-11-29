@@ -36,6 +36,7 @@ char **read_from_file(const char *name_file, uint64_t *len)
                     char **new_lines = (char**) realloc(lines, arr_length * sizeof(char*));
 
                     if(!new_lines){
+					    //here I specifically applied the output using fprintf from C
                         fprintf(stderr, "Can not reallocate memory!\n");
                         exit(1);
                     }
